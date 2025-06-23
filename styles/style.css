@@ -95,3 +95,70 @@ nav a {
 body.dark nav a {
   color: #82cfff;
 }
+
+/* ─────────────────────────────────────────
+   5.  Navbar
+   ───────────────────────────────────────── */
+
+.topbar{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:center;
+  padding:0.8rem 1rem;
+  background:#ffffff;
+  box-shadow:0 1px 4px rgba(0,0,0,0.08);
+  position:sticky; top:0; z-index:100;
+}
+.topbar a, .topbar button{
+  text-decoration:none;
+  color:#0066cc;
+  font-weight:600;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+.topbar button{
+  padding:6px 10px;
+  border-radius:4px;
+}
+body.dark .topbar{
+  background:#1f1f1f;
+}
+body.dark .topbar a, body.dark .topbar button{
+  color:#82cfff;
+}
+
+/* ─────────────────────────────────────────
+   6.  Collapsible details
+   ───────────────────────────────────────── */
+
+details{
+  border:1px solid var(--border-color,#ddd);
+  border-radius:6px;
+  margin:1.2rem auto;
+  max-width:800px;
+  background:var(--section-bg,#ffffff);
+  padding:0 1rem;
+}
+details[open]{padding-bottom:1rem;}
+summary{
+  cursor:pointer;
+  list-style:none;
+  padding:1rem 0;
+}
+summary::-webkit-details-marker{display:none;} /* hide default arrow */
+summary::after{
+  content:"▸";
+  float:right;
+  transition:transform 0.2s;
+}
+details[open] summary::after{
+  transform:rotate(90deg); /* arrow points down when open */
+}
+
+/* Dark-mode colors inherit from your existing body.dark rules */
+body.dark details{
+  background:#1f1f1f;
+  border-color:#444;
+}

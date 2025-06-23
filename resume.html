@@ -5,108 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Résumé – Celine Mangahas</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <script defer src="scripts/script.js"></script> <!-- dark-mode toggle already lives here -->
 </head>
 <body>
+
+  <!-- ───── Top-bar menu ───── -->
+  <nav class="topbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#certs">Certifications</a>
+    <button id="theme-toggle">Switch to Dark Mode</button>
+  </nav>
+
   <header>
-    <h1>Résumé</h1>
-    <p><a href="index.html">← Back to Portfolio</a></p>
+    <h1>Celine Mangahas – Résumé</h1>
   </header>
-  
-  <section>
-    <h2>Skills</h2>
+
+  <!-- ───── Skills ───── -->
+  <details id="skills" open>
+    <summary><h2>Skills</h2></summary>
     <ul>
       <li><strong>Languages & Frameworks:</strong> Python, JavaScript, HTML, CSS, SQL, C++, C, Java, R, React.js, Node.js</li>
-      <li><strong>Tools & Platforms:</strong> Git, GitHub, MySQL, REST APIs, Visual Studio Code, Unity, AWS, Spyder, JIRA, Atlassian</li>
-      <li><strong>Data Science:</strong> OpenCV, NumPy, Pandas, data wrangling, ML model evaluation</li>
-      <li><strong>Web Development:</strong> Full-stack development, frontend/backend integration, form validation, user auth</li>
+      <li><strong>Tools & Platforms:</strong> Git, GitHub, MySQL, REST APIs, VS Code, Unity, AWS, Spyder, JIRA, Atlassian</li>
+      <li><strong>Data Science:</strong> NumPy, Pandas, OpenCV, data wrangling, ML model evaluation</li>
+      <li><strong>Web Dev:</strong> Full-stack dev, auth, form validation, frontend / backend integration</li>
     </ul>
-  </section>
+  </details>
 
-  <section>
-    <h2>Work Experience</h2>
+  <!-- ───── Work Experience ───── -->
+  <details id="work">
+    <summary><h2>Work Experience</h2></summary>
     <ul>
       <li>
-        <strong>BrainStorm STEM Education – STEM Instructor</strong> (Jul 2025 – Present)<br>
+        <strong>BrainStorm STEM Education – STEM Instructor</strong> (Jul 2025 – Present)
         <ul>
-          <li>Teach robotics, engineering, and physics to 1st–6th graders using Scratch and Python.</li>
-          <li>Lead hands-on instruction across various STEM modules including physical computing and teamwork.</li>
+          <li>Teach robotics, engineering & physics to 1-6 grade students (Scratch & Python).</li>
         </ul>
       </li>
       <li>
-        <strong>Naval Air Warfare Center Weapons Division – Software Engineer</strong> (Jul 2023 – Nov 2023)<br>
+        <strong>NAVAIR – Software Engineer</strong> (Jul 2023 – Nov 2023)
         <ul>
-          <li>Automated flight data workflows using Python and SQL, cutting analysis time from weeks to hours.</li>
-          <li>Built dashboards summarizing 10GB+ of performance data using Pandas and NumPy.</li>
-          <li>Presented KPIs and forecasts to stakeholders; supported business planning decisions.</li>
-          <li>Unit tested data processing tools using Python and Spyder IDE.</li>
+          <li>Automated flight-data workflows in Python & SQL → 95 % faster analysis.</li>
+          <li>Built dashboards summarizing 10 GB+ of aviation KPIs.</li>
         </ul>
       </li>
-      <li>
-        <strong>Dynamic Augmented Solutions – AR Engineer</strong> (Dec 2022 – Feb 2023)<br>
-        <ul>
-          <li>Developed an Oculus VR experience showcasing a 360° Boeing 737 cockpit walkthrough in Unity/C#.</li>
-          <li>Designed Jurassic Park AR scenes and debugged UI in Hololens using MRTK + Unity.</li>
-          <li>Enhanced mobile medical AR apps with custom sprites and UI fixes.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Myers-Holum – Technology Analyst</strong> (Sep 2022 – Nov 2022)<br>
-        <ul>
-          <li>Created NetSuite-based dashboards and client portals using SQL and JavaScript.</li>
-          <li>Configured client systems, permissions, and data workflows across inventory/CRM modules.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Avenda Health – Software Engineering Intern</strong> (Jan 2022 – Apr 2022)<br>
-        <ul>
-          <li>Developed frontend sign-up workflows using JavaScript and CSS for Avenda Cloud.</li>
-          <li>Processed MRI data for lesion detection R&D with Python and SDLC documentation.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Bronco Buddies – Full Stack Developer</strong> (Aug 2021 – Dec 2021)<br>
-        <ul>
-          <li>Built Node.js backend and SQL schema for user matchmaking logic.</li>
-          <li>Developed responsive registration and login pages with form validation in JavaScript.</li>
-        </ul>
-      </li>
+      <!-- …keep the rest of your roles… -->
     </ul>
-  </section>
+  </details>
 
-  <section>
-    <h2>Projects</h2>
+  <!-- ───── Projects ───── -->
+  <details id="projects">
+    <summary><h2>Projects</h2></summary>
     <ul>
-      <li>
-        <strong>Game Performance Analysis</strong> (Mar 2024 – May 2024)<br>
-        Used R, Python, and BeautifulSoup to scrape, clean, and visualize game data using ggplot2 and dplyr.<br>
-        <a href="https://rpubs.com/celinem13/kaizodata" target="_blank">Project link</a>
-      </li>
-      <li>
-        <strong>Recipe Recommendation System</strong><br>
-        Implemented content-based ranking with cosine similarity and BM25 in Python.
-      </li>
-      <li>
-        GitHub: <a href="https://github.com/celinem13" target="_blank">github.com/celinem13</a>
-      </li>
+      <li><strong>Game Performance Analysis</strong> – R & Python data-viz project (<a href="https://rpubs.com/celinem13/kaizodata" target="_blank">link</a>)</li>
+      <li><strong>Recipe Recommendation System</strong> – cosine similarity + BM25 in Python</li>
+      <li>GitHub: <a href="https://github.com/celinem13" target="_blank">github.com/celinem13</a></li>
     </ul>
-  </section>
+  </details>
 
-  <section>
-    <h2>Education</h2>
+  <!-- ───── Education ───── -->
+  <details id="education">
+    <summary><h2>Education</h2></summary>
     <ul>
-      <li>
-        <strong>California Polytechnic University Pomona</strong><br>
-        Bachelor of Science in Computer Science, 2018–2022
-      </li>
+      <li><strong>Cal Poly Pomona</strong> – B.S. Computer Science (2018-2022)</li>
     </ul>
-  </section>
+  </details>
 
-  <section>
-    <h2>Certifications</h2>
+  <!-- ───── Certifications ───── -->
+  <details id="certs">
+    <summary><h2>Certifications</h2></summary>
     <ul>
       <li>Certified NetSuite Expert – Oracle SuiteFoundation</li>
     </ul>
-  </section>
+  </details>
+
+  <footer>
+    <p>📧 <a href="mailto:celinemangahas13@gmail.com">celinemangahas13@gmail.com</a> | ☎ 714-299-8553</p>
+    <p><a href="https://www.linkedin.com/in/celine-mangahas" target="_blank">LinkedIn</a> | <a href="https://github.com/celinem13" target="_blank">GitHub</a></p>
+  </footer>
 </body>
 </html>
 
