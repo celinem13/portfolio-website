@@ -46,3 +46,28 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* --- Light vs. Dark theme --- */
+body.dark {
+  background-color: #1e1e1e;
+  color: #e5e5e5;
+}
+
+body.dark a {           /* make links readable in dark mode   */
+  color: #4dabff;
+}
+
+#theme-toggle {         /* button styling for both themes     */
+  margin-top: 20px;
+  padding: 8px 14px;
+  border: none;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.dark #theme-toggle {
+  background: #4dabff;
+  color: #000;
+}
