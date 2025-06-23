@@ -78,3 +78,20 @@ body.dark #theme-toggle {
 #theme-toggle:hover {
   background: #004e99;
 }
+
+/* ─────────────────────────────────────────
+   4.  Resume site
+   ───────────────────────────────────────── */
+
+nav {
+  text-align: center;
+  margin-top: 20px;
+}
+nav a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+body.dark nav a {
+  color: #82cfff;
+}
