@@ -53,11 +53,16 @@ body.dark {
   color: #e5e5e5;
 }
 
-body.dark a {           /* make links readable in dark mode   */
+body.dark a {
   color: #4dabff;
 }
 
-#theme-toggle {         /* button styling for both themes     */
+body.dark #theme-toggle {
+  background-color: #4dabff;
+  color: #000;
+}
+
+#theme-toggle {
   margin-top: 20px;
   padding: 8px 14px;
   border: none;
@@ -65,9 +70,4 @@ body.dark a {           /* make links readable in dark mode   */
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
-}
-
-body.dark #theme-toggle {
-  background: #4dabff;
-  color: #000;
 }
