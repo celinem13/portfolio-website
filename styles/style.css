@@ -47,27 +47,44 @@ a:hover {
   text-decoration: underline;
 }
 
-/* --- Light vs. Dark theme --- */
+/* --- Dark Mode --- */
 body.dark {
-  background-color: #1e1e1e;
-  color: #e5e5e5;
+  background-color: #121212;
+  color: #f1f1f1;
 }
 
 body.dark a {
-  color: #4dabff;
+  color: #80bfff; /* Softer blue for links */
+}
+
+body.dark header {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+body.dark section {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 body.dark #theme-toggle {
-  background-color: #4dabff;
+  background-color: #80bfff;
   color: #000;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #theme-toggle {
   margin-top: 20px;
-  padding: 8px 14px;
-  border: none;
+  padding: 10px 14px;
   background: #0066cc;
   color: #fff;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
 }
