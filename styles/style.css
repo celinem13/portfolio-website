@@ -1,105 +1,65 @@
-/* Reset some default spacing */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Give everything a nice layout */
-header, section {
+/* ─────────────────────────────────────────
+   1.  Light-mode defaults (padded cards)
+   ───────────────────────────────────────── */
+header,
+section {
   max-width: 800px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 24px;          /* added padding for card feel */
+  background: #ffffff;    /* white card on light background */
+  border-radius: 6px;     /* soft corners */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* subtle shadow */
 }
 
-/* Header styles */
-header {
-  text-align: center;
-  padding-top: 40px;
+/* Light-mode page background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;   /* very light gray */
+  color: #333;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s; /* smooth switch */
 }
 
-h1 {
-  color: #222;
-  font-size: 2.2rem;
-}
-
-h2 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
-  margin-top: 40px;
-  color: #444;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-/* Make the contact link stand out */
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* --- Dark Mode --- */
+/* ─────────────────────────────────────────
+   2.  Dark-mode overrides
+   ───────────────────────────────────────── */
 body.dark {
-  background-color: #121212;
-  color: #f1f1f1;
+  background: #121212;
+  color: #eeeeee;               /* brighter text */
+}
+
+body.dark header,
+body.dark section {
+  background: #1f1f1f;          /* dark card */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
 body.dark a {
-  color: #80bfff; /* Softer blue for links */
+  color: #82cfff;               /* higher-contrast link blue */
 }
 
-body.dark header {
-  background-color: #1f1f1f;
-  padding: 20px;
-  border-bottom: 1px solid #333;
+body.dark h1, body.dark h2 {
+  color: #f4f4f4;               /* brighten headings too */
 }
 
-body.dark section {
-  background-color: #1a1a1a;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-body.dark #theme-toggle {
-  background-color: #80bfff;
-  color: #000;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
+/* ─────────────────────────────────────────
+   3.  Theme-toggle button (unchanged colors)
+   ───────────────────────────────────────── */
 #theme-toggle {
   margin-top: 20px;
-  padding: 10px 14px;
+  padding: 10px 16px;
+  border: none;
   background: #0066cc;
   color: #fff;
-  border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s;
 }
-
-/* --- Resume Button --- */
-.resume-btn {
-  display: inline-block;
-  padding: 10px 16px;
-  background: #0066cc;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
+body.dark #theme-toggle {
+  background: #82cfff;
+  color: #000;
 }
-
-.resume-btn:hover {
+#theme-toggle:hover {
   background: #004e99;
 }
