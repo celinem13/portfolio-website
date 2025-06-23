@@ -1,24 +1,39 @@
 /* ─────────────────────────────────────────
-   1.  Light-mode defaults (padded cards)
-   ───────────────────────────────────────── */
+   Shared Layout (applies to all themes)
+───────────────────────────────────────── */
 header,
 section {
   max-width: 800px;
   margin: 40px auto;
-  padding: 24px;          /* added padding for card feel */
-  background: #ffffff;    /* white card on light background */
-  border-radius: 6px;     /* soft corners */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08); /* subtle shadow */
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-/* Light-mode page background */
+/* ─────────────────────────────────────────
+   1. Light-mode (default)
+───────────────────────────────────────── */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f2f2f2;   /* very light gray */
+  background: #f2f2f2;
   color: #333;
   line-height: 1.6;
-  transition: background 0.3s, color 0.3s; /* smooth switch */
+  transition: background 0.3s, color 0.3s;
+}
+
+body header,
+body section {
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+
+body a {
+  color: #0066cc;
+}
+
+body h1, body h2 {
+  color: #222;
 }
 
 /* ─────────────────────────────────────────
