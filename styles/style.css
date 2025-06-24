@@ -168,3 +168,76 @@ body.dark details{
   background:#1f1f1f;
   border-color:#444;
 }
+
+/* ─────────────────────────────────────────
+   7. Contact Form
+───────────────────────────────────────── */
+
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button[type="submit"] {
+  margin-top: 1rem;
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #004a99;
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 1rem;
+  }
+}
+
+
+/* ───────────── Dark Mode Support ───────────── */
+body.dark form {
+  background: #1f1f1f;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+body.dark input[type="text"],
+body.dark input[type="email"],
+body.dark textarea {
+  background: #121212;
+  color: #eee;
+  border: 1px solid #444;
+}
