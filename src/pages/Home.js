@@ -1,33 +1,33 @@
-// src/components/Home.js
 import React from 'react';
+import { NavLink } from 'react-router-dom'; // ✅ Import NavLink
 
 function Home() {
   return (
     <div>
-      {/* ───── Top-bar menu ───── */}
+      {/* Top-bar menu */}
       <nav className="navbar">
-        <a href="/">🏠 Home</a>
-        <a href="/resume">📄 Résumé</a>
-        <a href="/contact">✉️ Contact</a>
+        <NavLink to="/">🏠 Home</NavLink>
+        <NavLink to="/resume">📄 Résumé</NavLink>
+        <NavLink to="/contact">✉️ Contact</NavLink>
         <button id="theme-toggle">Switch to Light Mode</button>
       </nav>
 
-      {/* ───── Intro Header ───── */}
+      {/* Intro Header */}
       <header>
         <h1>Hello, I'm Celine 👋</h1>
         <p>Welcome to my web developer portfolio.</p>
       </header>
 
-      {/* ───── About me section ───── */}
+      {/* About me section */}
       <section>
         <h2>About Me</h2>
         <p>
-          I am a software engineer with a passion for web development.
+          I am a software engineer with a passion for web development. <br />
           I'm currently rebuilding my skills and excited to work with modern tools again.
         </p>
       </section>
 
-      {/* ───── Projects I have done ───── */}
+      {/* Projects I have done */}
       <section>
         <h2>Projects</h2>
         <ul>
