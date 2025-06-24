@@ -1,3 +1,4 @@
+
 /* ─────────────────────────────────────────
    Shared Layout (applies to all themes)
 ───────────────────────────────────────── */
@@ -39,23 +40,23 @@ body h1, body h2 {
 /* ─────────────────────────────────────────
    2.  Dark-mode overrides
    ───────────────────────────────────────── */
-body.dark {
+body.dark-mode {
   background: #121212;
-  color: #eeeeee;               /* brighter text */
+  color: #eeeeee;
 }
 
-body.dark header,
-body.dark section {
-  background: #1f1f1f;          /* dark card */
+body.dark-mode header,
+body.dark-mode section {
+  background: #1f1f1f;
   box-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
-body.dark a {
-  color: #82cfff;               /* higher-contrast link blue */
+body.dark-mode a {
+  color: #82cfff;
 }
 
-body.dark h1, body.dark h2 {
-  color: #f4f4f4;               /* brighten headings too */
+body.dark-mode h1, body.dark-mode h2 {
+  color: #f4f4f4;
 }
 
 /* ─────────────────────────────────────────
@@ -71,7 +72,7 @@ body.dark h1, body.dark h2 {
   cursor: pointer;
   transition: background 0.3s;
 }
-body.dark #theme-toggle {
+body.dark-mode #theme-toggle {
   background: #82cfff;
   color: #000;
 }
@@ -92,7 +93,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
-body.dark nav a {
+body.dark-mode nav a {
   color: #82cfff;
 }
 
@@ -122,10 +123,10 @@ body.dark nav a {
   padding:6px 10px;
   border-radius:4px;
 }
-body.dark .topbar{
+body.dark-mode .topbar{
   background:#1f1f1f;
 }
-body.dark .topbar a, body.dark .topbar button{
+body.dark-mode .topbar a, body.dark-mode .topbar button{
   color:#82cfff;
 }
 
@@ -139,10 +140,9 @@ nav.topbar a.active {
   border-bottom: 2px solid #82cfff;
 }
 
-
 /* ─────────────────────────────────────────
    6.  Collapsible details
-   ───────────────────────────────────────── */
+───────────────────────────────────────── */
 
 details{
   border:1px solid var(--border-color,#ddd);
@@ -158,18 +158,17 @@ summary{
   list-style:none;
   padding:1rem 0;
 }
-summary::-webkit-details-marker{display:none;} /* hide default arrow */
+summary::-webkit-details-marker{display:none;}
 summary::after{
   content:"▸";
   float:right;
   transition:transform 0.2s;
 }
 details[open] summary::after{
-  transform:rotate(90deg); /* arrow points down when open */
+  transform:rotate(90deg);
 }
 
-/* Dark-mode colors inherit from your existing body.dark rules */
-body.dark details{
+body.dark-mode details{
   background:#1f1f1f;
   border-color:#444;
 }
@@ -232,16 +231,14 @@ form button[type="submit"]:hover {
   }
 }
 
-
-/* ───────────── Dark Mode Support ───────────── */
-body.dark form {
+body.dark-mode form {
   background: #1f1f1f;
   box-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
-body.dark input[type="text"],
-body.dark input[type="email"],
-body.dark textarea {
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea {
   background: #121212;
   color: #eee;
   border: 1px solid #444;
