@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import { ThemeContext } from './context/ThemeContext'; // ⬅️ Import the theme context
 
 function App() {
+  const { toggleTheme } = useContext(ThemeContext); // ⬅️ Grab the toggle function
+
   return (
     <Router>
       <nav className="topbar">
         <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>🏠 Home</NavLink>
         <NavLink to="/resume" className={({ isActive }) => isActive ? 'active' : ''}>📄 Résumé</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>✉️ Contact</NavLink>
+        <button id="theme-toggle" onClick={toggleTheme}>
+          Toggle Theme
+        </button>
       </nav>
 
       <Routes>
