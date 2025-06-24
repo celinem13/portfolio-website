@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Resume from './pages/Resume';
@@ -8,11 +8,11 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      <div className="topbar">
-        <Link to="/">Home</Link>
-        <Link to="/resume">Resume</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
+      <nav className="topbar">
+        <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>🏠 Home</NavLink>
+        <NavLink to="/resume" className={({ isActive }) => isActive ? 'active' : ''}>📄 Résumé</NavLink>
+        <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>✉️ Contact</NavLink>
+      </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />

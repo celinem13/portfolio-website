@@ -134,6 +134,11 @@ body.dark .topbar a, body.dark .topbar button{
   border-bottom: 2px solid #82cfff;
 }
 
+nav.topbar a.active {
+  color: #ffffff;
+  border-bottom: 2px solid #82cfff;
+}
+
 
 /* ─────────────────────────────────────────
    6.  Collapsible details
