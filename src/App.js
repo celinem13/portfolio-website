@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-do
 import Home from './pages/Home';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
-import { ThemeContext } from './context/ThemeContext'; // ⬅️ Import the theme context
+import { ThemeContext } from './context/ThemeContext';
 
 function App() {
-  const { toggleTheme } = useContext(ThemeContext); // ⬅️ Grab the toggle function
+  const { toggleTheme } = useContext(ThemeContext);
 
   return (
-    <Router>
+    <Router basename="/portfolio-website">
       <nav className="topbar">
         <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>🏠 Home</NavLink>
         <NavLink to="/resume" className={({ isActive }) => isActive ? 'active' : ''}>📄 Résumé</NavLink>
